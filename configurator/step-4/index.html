@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Configurator Dialog</title>
+
+    <link rel="stylesheet" href="configurator.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Main Page -->
+    <h1>Boba Configurator</h1>
+    <input type="button" id="openmodal" value="Open Modal">
+
+
+    <!--Pop-up Modal-->
+    <div class="config_modal" id="config_modal">
+        <div class="modal_content">
+            <div class="modal_header">
+                <button class="close">&times;</button>
+                <img src="https://img.tapmango.com/mo/430c1ae3-1958-47f0-af72-1b9455383afd/250xAUTO/770c9fc6-8d1c-406f-b5a1-5aed38d9829e.png" alt="Glass of House Milk Tea">
+                <div class="title">Classic Milk Tea</div>
+                <div class="description">Traditional black tea blend with smooth, dairy-free cream </div>
+            </div>
+
+            <div class="modal_body">
+                <div class="size_selector">
+                    <div class="selector_header">
+                        <div class="selector_title">Size</div>
+                        <div class="selector_condition">Required</div>
+                    </div>
+                    <input type="radio" id="small_size" name="size" value="small">
+                    <label for="small_size">Small</label><br>
+                    <input type="radio" id="large_size" name="size" value="large">
+                    <label for="large_size">Large</label><br>
+                </div>
+
+                <div class="topping_selector">
+                    <div class="selector_header">
+                        <div class="selector_title">Toppings</div>
+                        <div class="selector_condition">Optional</div>
+                        <div class="selector_condition">Max 3</div>
+                    </div>
+
+                    <div id=boba_selector>
+                        <input type="checkbox" id="boba" name="topping" value="boba">
+                        <label for="boba"> Boba ($0.70)</label><br>
+
+                    </div>
+
+                    <div id=goldenboba_selector>
+                        <input type="checkbox" id="goldenboba" name="topping" value="goldenboba">
+                        <label for="goldenboba"> Golden Boba ($0.70)</label><br>
+                    </div>
+
+                    <div id=lycheejelly_selector>
+                        <input type="checkbox" id="lycheejelly" name="topping" value="lycheejelly">
+                        <label for="lycheejelly"> Lychee Jelly ($0.70)</label><br>
+                    </div>
+
+                    <div id=grassjelly_selector>
+                        <input type="checkbox" id="grassjelly" name="topping" value="grassjelly">
+                        <label for="grassjelly"> Grass Jelly ($0.80)</label><br>
+                    </div>
+
+                    <div id=eggpudding_selector>
+                        <input type="checkbox" id="eggpudding" name="topping" value="eggpudding">
+                        <label for="eggpudding"> Egg Pudding ($0.80)</label><br>
+                    </div>
+
+                    <div id=aloevera_selector>
+                        <input type="checkbox" id="aloevera" name="topping" value="aloevera">
+                        <label for="aloevera"> Aloe Vera ($0.70)</label><br>
+                    </div>
+
+                    <div id=redbean_selector>
+                        <input type="checkbox" id="redbean" name="topping" value="redbean">
+                        <label for="redbean"> Sweet Red Bean ($0.70)</label><br>
+                    </div>
+
+                    <div id=lycheepopping_selector>
+                        <input type="checkbox" id="lycheepopping" name="topping" value="lycheepopping">
+                        <label for="lycheepopping"> Lychee Popping Boba ($0.80)</label><br>
+                    </div>
+
+                    <div id=strawberrypopping_selector>
+                        <input type="checkbox" id="strawberrypopping" name="topping" value="strawberrypopping">
+                        <label for="strawberrypopping"> Strawberry Popping Boba ($0.80)</label><br>
+                    </div>
+
+                    <div id=sago_selector>
+                        <input type="checkbox" id="sago" name="topping" value="sago">
+                        <label for="sago"> Sago ($0.80)</label><br>
+                    </div>
+                </div>
+
+                <div class="sugar_selector">
+                    <div class="selector_header">
+                        <div class="selector_title">Sugar Level</div>
+                        <div class="selector_condition">Required</div>
+                    </div>
+                    <input type="radio" id="extra_sugar" name="sugar_level" value="extra_sugar">
+                    <label for="extra_sugar">Extra Sugar 120%</label><br>
+                    <input type="radio" id="normal_sugar" name="sugar_level" value="normal_sugar">
+                    <label for="normal_sugar">Normal Sugar 100% (Recommended)</label><br>
+                    <input type="radio" id="less_sugar" name="sugar_level" value="less_sugar">
+                    <label for="less_sugar">Less Sugar 75%</label><br>
+                    <input type="radio" id="half_sugar" name="sugar_level" value="half_sugar">
+                    <label for="half_sugar">Half Sugar 50%</label><br>
+                    <input type="radio" id="little_sugar" name="sugar_level" value="little_sugar">
+                    <label for="little_sugar">Little Sugar 25%</label><br>
+                    <input type="radio" id="no_sugar" name="sugar_level" value="no_sugar">
+                    <label for="no_sugar">No Sugar 0%</label><br>
+                </div>
+
+                <div class="ice_selector">
+                    <div class="selector_header">
+                        <div class="selector_title">Ice Level</div>
+                        <div class="selector_condition">Required</div>
+                    </div>
+                    <input type="radio" id="regularice" name="ice_level" value="regularice">
+                    <label for="regularice">Regular Ice</label><br>
+                    <input type="radio" id="lessice" name="ice_level" value="lessice">
+                    <label for="lessice">Less Ice</label><br>
+                    <input type="radio" id="noice" name="ice_level" value="noice">
+                    <label for="noice">No Ice</label><br>
+                    <input type="radio" id="hot" name="ice_level" value="hot">
+                    <label for="hot">Hot</label><br>
+                    <input type="radio" id="extraice" name="ice_level" value="extraice">
+                    <label for="extraice">Extra Ice</label><br>
+                </div>
+            </div>
+
+            <div class="modal_footer">
+                <label for="quantity" id="quantity"> Quantity: </label>
+                <div class="quantity_control">
+                    <button id="quantity_increment_btn">+</button>
+                    <div id="quantity_display">1</div>
+                    <button id="quantity_decrement_btn">-</button>
+                </div>
+
+
+                <div class="add_to_cart" id="add_to_cart"></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="configurator.js"></script>
+
+</body>
+
+</html>
