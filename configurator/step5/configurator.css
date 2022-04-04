@@ -1,0 +1,113 @@
+.config_modal {
+    display: none;
+    /* Hidden by default */
+    position: fixed;
+    /* Stay in place */
+    z-index: 1;
+    /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%;
+    /* Full width */
+    height: 100%;
+    /* Full height */
+    overflow: auto;
+    /* Enable scroll if needed */
+    background-color: rgb(0, 0, 0);
+    /* Fallback color */
+    background-color: rgba(0, 0, 0, 0.4);
+    /* Black w/ opacity */
+}
+
+
+/* Modal Content/Box */
+
+.modal_content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 30%;
+    /* Could be more or less, depending on screen size */
+}
+
+
+/* The Close Button */
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+
+/*Selection Option Headers*/
+
+div.selector_header {
+    display: flex;
+    align-items: flex-end;
+}
+
+div.selector_title {
+    width: 50%;
+    background: rgb(178, 159, 196);
+    text-align: left;
+    font-size: 2rem;
+}
+
+div.selector_condition {
+    width: 50%;
+    background: rgb(170, 211, 221);
+    text-align: right;
+    font-size: 1.5rem;
+}
+
+.quantity_control {
+    display: flex;
+}
+
+.drink_quantity_control {
+    display: flex;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+html {
+    /* Make iOS not resize on device rotation */
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+    /* NOTE
+      html is set to 62.5% so that all the REM measurements throughout Skeleton
+      are based on 10px sizing. So basically 1.5rem = 15px  
+      
+      Change this if you want to base your REM measuements on something other 
+      than 10px as the base
+      */
+    font-size: 62.5%;
+}
+
+body {
+    font-family: 'Noto Sans', sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 1.5em;
+    /* currently ems cause chrome bug misinterpreting rems on body element */
+    line-height: 1.6;
+    margin: 0;
+}
+
+.add_to_cart {
+    background-color: #888;
+}
