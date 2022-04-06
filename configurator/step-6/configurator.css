@@ -1,0 +1,206 @@
+.config_modal {
+    display: none;
+    /* Hidden by default */
+    position: fixed;
+    /* Stay in place */
+    z-index: 1;
+    /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%;
+    /* Full width */
+    height: 100%;
+    /* Full height */
+    overflow: auto;
+    /* Enable scroll if needed */
+    background-color: rgb(0, 0, 0);
+    /* Fallback color */
+    background-color: rgba(0, 0, 0, 0.4);
+    /* Black w/ opacity */
+}
+
+
+/* Modal Content/Box */
+
+
+/*Typical Device Breakpoints: https://www.w3schools.com/css/css_rwd_mediaqueries.asp */
+
+
+/* Extra small devices (phones, 600px and down) */
+
+@media only screen and (max-width: 600px) {
+    .modal_content {
+        background-color: #fefefe;
+        margin: 15% auto;
+        /* 15% from the top and centered */
+        padding: 20px;
+        border: 1px solid #888;
+        width: 100%;
+    }
+}
+
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+
+@media only screen and (min-width: 600px) {
+    .modal_content {
+        background-color: #fefefe;
+        margin: 15% auto;
+        /* 15% from the top and centered */
+        padding: 20px;
+        border: 1px solid #888;
+        width: 100%;
+    }
+}
+
+
+/* Medium devices (landscape tablets, 768px and up) */
+
+@media only screen and (min-width: 768px) {
+    .modal_content {
+        background-color: #fefefe;
+        margin: 15% auto;
+        /* 15% from the top and centered */
+        padding: 20px;
+        border: 1px solid #888;
+        width: 25%;
+    }
+}
+
+
+/* Large devices (laptops/desktops, 992px and up) */
+
+@media only screen and (min-width: 992px) {
+    .modal_content {
+        background-color: #fefefe;
+        margin: 15% auto;
+        /* 15% from the top and centered */
+        padding: 20px;
+        border: 1px solid #888;
+        width: 25%;
+    }
+}
+
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+
+@media only screen and (min-width: 1200px) {
+    .modal_content {
+        background-color: #fefefe;
+        margin: 15% auto;
+        /* 15% from the top and centered */
+        padding: 20px;
+        border: 1px solid #888;
+        width: 25%;
+    }
+}
+
+
+/* The Close Button */
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+
+/*Selection Option Headers*/
+
+div.selector_header {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+}
+
+div.selector_title {
+    width: 50%;
+    background: rgb(178, 159, 196);
+    font-size: 2rem;
+}
+
+div.selector_condition {
+    width: 50%;
+    background: rgb(170, 211, 221);
+    font-size: 1.5rem;
+}
+
+
+/*Topping Selection Styling*/
+
+.topping_select {
+    /*overall topping container: checkbox, label, quantity control*/
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.topping_quantity {
+    padding-left: 1rem;
+    padding-right: 1rem;
+    color: rgb(19, 64, 136);
+    font-weight: bold;
+}
+
+.quantity_control {
+    /*-0+ inc/dec system container*/
+    display: flex;
+}
+
+input[type="checkbox"].topping_selector {
+    background-color: aliceblue;
+}
+
+input:checked+label {
+    color: rgb(19, 64, 136);
+    font-weight: bold;
+}
+
+.drink_quantity_control {
+    display: flex;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+html {
+    /* Make iOS not resize on device rotation */
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+    /* NOTE
+      html is set to 62.5% so that all the REM measurements throughout Skeleton
+      are based on 10px sizing. So basically 1.5rem = 15px  
+      
+      Change this if you want to base your REM measuements on something other 
+      than 10px as the base
+      */
+    font-size: 62.5%;
+}
+
+body {
+    font-family: 'Noto Sans', sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 1.5em;
+    /* currently ems cause chrome bug misinterpreting rems on body element */
+    line-height: 1.6;
+    margin: 0;
+}
+
+.add_to_cart {
+    background-color: #888;
+}
