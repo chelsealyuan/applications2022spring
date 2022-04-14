@@ -1,0 +1,308 @@
+        .config_modal {
+            display: none;
+            /* Hidden by default */
+            position: fixed;
+            /* Stay in place */
+            z-index: 1;
+            /* Sit on top */
+            left: 0;
+            top: 0;
+            width: 100%;
+            /* Full width */
+            height: 100%;
+            /* Full height */
+            overflow: auto;
+            /* Enable scroll if needed */
+            background-color: rgb(0, 0, 0);
+            /* Fallback color */
+            background-color: rgba(0, 0, 0, 0.2);
+            /* Black w/ opacity */
+        }
+        
+        html {
+            /* Make iOS not resize on device rotation */
+            -ms-text-size-adjust: 100%;
+            -webkit-text-size-adjust: 100%;
+            /* NOTE
+      html is set to 62.5% so that all the REM measurements throughout Skeleton
+      are based on 10px sizing. So basically 1.5rem = 15px  
+      
+      Change this if you want to base your REM measuements on something other 
+      than 10px as the base
+      */
+            font-size: 62.5%;
+        }
+        
+        body {
+            font-family: 'Libre Franklin', sans-serif;
+            font-weight: 400;
+            font-style: normal;
+            font-size: 1.5em;
+            line-height: 1.6;
+            margin: 0;
+        }
+        
+        .modal_container_scroll {
+            max-height: inherit;
+            overflow-y: scroll;
+            overflow-x: hidden;
+        }
+        
+        .modal_header {
+            margin: 20px;
+        }
+        
+        .modal_body {
+            margin: 20px;
+        }
+        /*Typical Device Breakpoints: https://www.w3schools.com/css/css_rwd_mediaqueries.asp */
+        /* Larger than mobile devices (768px and up) */
+        
+        @media only screen and (min-width: 768px) {
+            .modal_container {
+                background-color: #fefefe;
+                margin: auto;
+                margin-top: 20px;
+                max-height: calc(100vh - 50px);
+                max-width: 425px;
+                min-width: 425px;
+                border-radius: 8px;
+                box-shadow: 0 0 24px 8px rgb(0 0 0 / 30%);
+                position: relative;
+            }
+            .modal_footer {
+                position: sticky;
+                border-radius: 8px;
+            }
+            .close {
+                position: absolute;
+            }
+        }
+        /* Mobile devices (768px and down) */
+        
+        @media only screen and (max-width: 768px) {
+            .modal_container {
+                background-color: #fefefe;
+                margin: auto;
+                width: 100%;
+                position: relative;
+            }
+            .modal_footer {
+                position: fixed;
+                border-radius: 0px;
+            }
+            .close {
+                position: fixed;
+            }
+        }
+        
+        .modal_footer {
+            display: flex;
+            flex-wrap: wrap;
+            padding: 20px;
+            justify-content: space-between;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            z-index: 1;
+            background-color: #ffffff;
+        }
+        
+        .close {
+            color: rgb(126, 126, 126);
+            width: 48px;
+            height: 48px;
+            font-size: 3.5rem;
+            border-radius: 50%;
+            border: none;
+            background-color: rgba(0, 0, 0, 0.15);
+            z-index: 3;
+            right: 18px;
+            top: 10px;
+        }
+        
+        .title_container {
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+        
+        .title {
+            font-size: 2.5rem;
+            font-weight: 500;
+        }
+        
+        .calorie_count {
+            font-size: 1.6rem;
+            color: rgb(79, 79, 79);
+            margin-left: 40px;
+        }
+        
+        .description {
+            font-size: 1.5rem;
+            font-weight: 400;
+        }
+        
+        .add_to_cart {
+            color: #ffffff;
+            font-size: 1.75rem;
+            background-color: #F5715A;
+            padding: 10px;
+            margin-left: 30px;
+            border-radius: 5px;
+        }
+        /* Button Styling */
+        
+        .topping_inc_btn {
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+            border: none;
+            background-color: #F5715A;
+            color: #ffffff;
+            font-size: 2rem;
+            font-weight: 500;
+            text-align: center;
+        }
+        
+        .topping_dec_btn {
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+            border: none;
+            background-color: #F5715A;
+            color: #ffffff;
+            font-size: 2rem;
+            font-weight: 500;
+            text-align: center;
+        }
+        
+        .drink_quantity_control {
+            font-size: 1.75rem;
+            background-color: #ffffff;
+            padding: 10px;
+            border-radius: 5px;
+            border: solid;
+            border-color: black;
+            color: black;
+        }
+        
+        #quantity_increment_btn {
+            width: 24px;
+            height: 24px;
+            border: none;
+            color: #000000;
+            background-color: #ffffff;
+            font-size: 2rem;
+            font-weight: 500;
+            text-align: center;
+        }
+        
+        #quantity_decrement_btn {
+            width: 24px;
+            height: 24px;
+            border: none;
+            color: #000000;
+            background-color: #ffffff;
+            font-size: 2rem;
+            font-weight: 500;
+            text-align: center;
+        }
+        
+        .close:hover,
+        .close:focus {
+            color: black;
+            text-decoration: none;
+            cursor: pointer;
+        }
+        /*Selection Option Headers*/
+        
+        div.selector_header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            background-color: #FFF8DF;
+            padding: 10px;
+        }
+        
+        div.selector_title {
+            text-align: left;
+            font-size: 2rem;
+            font-weight: 400;
+        }
+        
+        div.selector_condition {
+            font-size: 1.5rem;
+            text-align: right;
+            font-weight: 600;
+            color: #F5715A;
+        }
+        /*Topping Selection Styling*/
+        
+        .topping_select {
+            /*overall topping container: checkbox, label, quantity control*/
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+        
+        .extra_cost {
+            font-size: 1.2rem;
+            color: rgb(79, 79, 79);
+            margin-left: 8px;
+        }
+        
+        .topping_quantity {
+            padding-left: 10px;
+            padding-right: 10px;
+            color: rgb(0, 0, 0);
+            font-weight: bold;
+        }
+        
+        .quantity_control {
+            /*-0+ inc/dec system container*/
+            display: flex;
+        }
+        
+        input[type="checkbox"].topping_selector {
+            background-color: aliceblue;
+        }
+        
+        input:checked+label {
+            color: rgb(0, 0, 0);
+            font-weight: bold;
+        }
+        
+        .drink_quantity_control {
+            display: flex;
+        }
+        
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .description {
+            margin: 5px;
+        }
+        
+        .check_label,
+        .size_select {
+            margin: 10px;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+        }
+        
+        .sugar_select {
+            margin: 10px;
+        }
+        
+        .ice_select {
+            margin: 10px;
+        }
