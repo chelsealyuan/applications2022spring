@@ -70,6 +70,9 @@ function closeAndClear() {
     for (let ice of ices) {
         ice.checked = false;
     }
+
+    //clear textarea
+    document.getElementById("special_instructions_box").value = "";
 }
 
 
